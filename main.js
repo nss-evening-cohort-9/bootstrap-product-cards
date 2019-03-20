@@ -65,7 +65,14 @@ const domStringBuilder = (x) => {
   let domString = '';
   x.forEach((product) => {
     domString += '<div class="col-4 product">';
-    domString +=   `<h3>${product.title}</h3>`;
+    domString +=   `<div class="card">`;
+    domString +=   `  <div class="card-header">${product.title}</div>`;
+    domString +=   `  <img src=${product.imageUrl} class="card-img-top" alt="...">`;
+    domString +=   `  <div class="card-body">`;
+    domString +=   `    <p class="card-text">${product.description}</p>`;
+    domString +=    `   <h6>Size: ${product.size}</h6>`
+    domString +=   `  </div>`;
+    domString +=   `</div>`;
     domString += '</div>';
   })
 
